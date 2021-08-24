@@ -28,16 +28,18 @@ var vacationSpots = [
 
 function App() {
 
-var cards2= vacationSpots.map((locationz,index)=>
-  <div key={locationz.name + "-" + index}>
-    <Spot location={locationz} className="cards"/>
+var cards2= vacationSpots.map((locations,index)=>
+    <div key={locations.name + "-" + index}>
+    <Spot location={locations}/>
     </div>
   )
-
+  
   return (
     <div className="container">
       <h1>Vacation Spots</h1>
+      <div className="listContainer">
       {cards2}
+      </div>
     </div>
   )
 }
