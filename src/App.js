@@ -1,25 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import Spot from './Spot.js';
+
+var vacationSpots = [
+  {
+    place: "Meridian, Idaho",
+    price: 40,
+    timeToGo: "Spring"
+  },{
+    place: "Cancun",
+    price: 900,
+    timeToGo: "Winter"
+  },{
+    place: "China",
+    price: 1200,
+    timeToGo: "Fall"
+  },{
+    place: "Russia",
+    price: 1100,
+    timeToGo: "Summer"
+  },{
+    place: "Lebanon",
+    price: 400,
+    timeToGo: "Spring"
+  }
+]
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+var cards2= vacationSpots.map((locationz,index)=>
+  <div key={locationz.name + "-" + index}>
+    <Spot location={locationz} className="cards"/>
+    </div>
+  )
+
+  return (
+    <div className="container">
+      <h1>Vacation Spots</h1>
+      {cards2}
+    </div>
+  )
+}
 export default App;
+
+
+
+
