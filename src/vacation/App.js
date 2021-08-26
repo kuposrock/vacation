@@ -27,7 +27,6 @@ var vacationSpots = [
 
 
 function App() {
-
   var cards2= vacationSpots.map((locations,index)=>
     <div key={locations.name + "-" + index}>
     <Spot location={locations}/>
