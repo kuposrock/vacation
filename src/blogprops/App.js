@@ -1,11 +1,14 @@
 import './App.css';
-
-
+import Header from './Header.js';
+import Footer from './Footer.js';
+import BlogList from './BlogList.js';
 function App() {
  
   return (
-    <div className="container">
-      <h1>Vacation Spots</h1>
+    <div>
+    <Header />
+    <BlogList/>
+    <Footer />
     </div>
   )
 }
