@@ -27,8 +27,9 @@ var data = [
 
 export default function BlogList() {
     return (
-        <div  className="blogList">
-            <BlogPost posts="data"/>
+        <div className="blogList">
+            blog post
+            {/* <BlogPost posts={data}/> */}
         </div>
     )
 }

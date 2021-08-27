@@ -6,7 +6,7 @@ export default function Navbar() {
         <div>
             <div>Home</div>
             <div>About</div>
-            <div>Sampe Post</div>
+            <div>Same Post</div>
             <div>Contact</div>
         </div>
     )
