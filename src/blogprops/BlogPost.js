@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 export default function BlogPost(props) {
     return (
-        <div className="blogPost">
+        <div className="post">
             <h2>{props.posts.title}</h2>
             <h3>{props.posts.subTitle}</h3>
-            <h4>{props.posts.author}</h4>
-            <h4>{props.posts.date}</h4>
+            <p>Posted by {props.posts.author} on {props.posts.date}</p>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPost from './BlogList.js';
+import BlogPost from './BlogPost.js';
 
 var data = [
     {
@@ -11,7 +11,7 @@ var data = [
         title: "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.",
         subTitle: "",
         author: "Start Bootstrap",
-        date: "eptember 18, 2019"
+        date: "September 18, 2019"
     },{
         title: "Science has not yet mastered prophecy",
         subTitle: "We predict too much for the next year and yet far too little for the next ten.",
@@ -26,10 +26,16 @@ var data = [
 ];
 
 export default function BlogList() {
+    var posts = data.map((post,index)=>{
+        return(
+        <div key={index}>
+            <BlogPost posts={post}/>
+        </div>)
+    });
     return (
         <div className="blogList">
-            blog post
-            {/* <BlogPost posts={data}/> */}
+            
+            {posts}
         </div>
     )
 }
