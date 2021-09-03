@@ -1,0 +1,45 @@
+.container {
+  text-align: center;
+  width: 80%;
+  margin:auto;
+  
+}
+
+.listContainer {
+  text-align: center;
+  width: 30%;
+  margin:auto;
+  height:100%;
+  border: 5px solid rgb(141, 131, 131);
+  border-radius: 20px;
+  padding:30px;
+}
+
+.card{
+  background-color: beige;
+  width:90%;
+  border-radius: 20px;
+  padding:10px;
+}
+
+.Spring{
+  background-color: #65F777;
+  margin:auto;
+  margin:20px auto;
+}
+
+.Winter{
+  background-color: #659CF7;
+  margin:auto;
+  margin:20px auto;
+}
+.Fall{
+  background-color: #F7C165;
+  margin:auto;
+  margin:20px auto;
+}
+.Summer{
+  background-color:#F765E5;
+  margin:auto;
+  margin:20px auto;
+}
