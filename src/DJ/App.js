@@ -1,11 +1,11 @@
 import './App.css';
-import DjBooth from './DjBooth';
+import DiceBox from './DiceBox';
 
 function App() {
  
   return (
     <div className="container">
-      <DjBooth/>
+      <DiceBox/>
     </div>
   )
 }
