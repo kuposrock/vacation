@@ -30,3 +30,6 @@ class DiceBox extends React.Component {
 }
 export default DiceBox;
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
