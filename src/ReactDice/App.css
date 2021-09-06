@@ -1,0 +1,25 @@
+.diceRow{
+  display: flex;
+ 
+  justify-content: center;
+  border: 3px solid black;
+  width: 700px;
+  margin:auto;
+
+}
+.dice{
+  height:100px;
+  width:100px;
+  border: 3px solid black;
+  border-radius: 15px;
+  text-align: center;
+  margin:10px;
+}
+
+.dice p {
+  width:80%;
+  margin:auto;
+  border: 1px solid black;
+  position: relative;
+  top:40%
+}

@@ -4,11 +4,11 @@ class DiceBox extends React.Component {
     constructor() {
         super();
         this.state = {
-            num1: getRandomInt(5)+1,
-            num2: getRandomInt(5)+1,
-            num3: getRandomInt(5)+1,
-            num4: getRandomInt(5)+1,
-            num5: getRandomInt(5)+1
+            num1: Math.floor(Math.random() * 6),
+            num2: Math.floor(Math.random() * 6),
+            num3: Math.floor(Math.random() * 6),
+            num4: Math.floor(Math.random() * 6),
+            num5: Math.floor(Math.random() * 6)
         }
         this.setDice = this.setDice.bind(this)
     }
@@ -30,6 +30,3 @@ class DiceBox extends React.Component {
 }
 export default DiceBox;
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
