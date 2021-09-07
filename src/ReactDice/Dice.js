@@ -13,8 +13,7 @@ export default function Dice(props) {
     }
     }
     return (
-        <div className="dice" onClick={()=>{selectDice()}}> 
-
+        <div className="dice" onClick={()=>{selectDice()}} > 
            <p> {props.number}</p>
         </div>
     )
