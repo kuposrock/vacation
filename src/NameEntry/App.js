@@ -4,8 +4,7 @@ import NameEntry from './NameEntry';
 function App() {
  
   return (
-    <div className="container">
-      
+    <div >
       <NameEntry/>
     </div>
   )

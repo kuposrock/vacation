@@ -16,7 +16,7 @@ class NameEntry extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="container">
             <form onSubmit={this.mySubmitHandler}>
                 <h1>Hello {this.state.username}</h1>
                 <p>Enter your name, and submit:</p>
