@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './NameEntry/App.js';
+import App from './NameBadge/App.js';
 
 ReactDOM.render(
     <App />,
