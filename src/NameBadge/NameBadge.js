@@ -5,7 +5,7 @@ class NameEntry extends React.Component {
     constructor(props) {
         super(props);
         this.state = { fName:"",lName:"",email:"",pob:"",phone:"",food:"",description:""};
-               
+        
     }
     mySubmitHandler = (event) => {
         event.preventDefault();
