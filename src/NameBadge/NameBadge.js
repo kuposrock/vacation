@@ -5,7 +5,7 @@ class NameEntry extends React.Component {
     constructor(props) {
         super(props);
         this.state = { fName: "", lName: "", email: "", pob: "", phone: "", food: "", description: "", items: [] };
-
+        
     }
     mySubmitHandler = (event) => {
         event.preventDefault();
@@ -27,10 +27,15 @@ class NameEntry extends React.Component {
                         <input type='text' onChange={this.myChangeHandler} name="lName" placeholder="Last Name" />
                         <input type='text' onChange={this.myChangeHandler} name="email" placeholder="Favorite Food" />
                         <input type='text' onChange={this.myChangeHandler} name="pob" placeholder="Place of Birth" />
-                        <input type='text' onChange={this.myChangeHandler} name="phone" placeholder="Phone Number" />
+                        <input type='number' onChange={this.myChangeHandler} name="phone" placeholder="Phone Number" />
                         <input type='text' onChange={this.myChangeHandler} name="food" placeholder="Favorite Food" />
                         <textarea type='text' onChange={this.myChangeHandler} name="description" placeholder="Description" className="description" />
-                        <input type='submit' />
+                        {console.log(this.state.fName.length <=2)}
+                        <input type='submit' disabled={(this.state.fName.length <=2 || this.state.lName.length <=2 || this.state.email.length <=2 || this.state.pob.length <=2 || this.state.phone.length <=2 || this.state.food.length <=2 || this.state.description.length <=2)}/>
+                        
+                       
+                        
+                   
                     </form>
                 </div>
 
