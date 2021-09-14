@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './API/App.js';
+import App from './ColorAPI/App.js';
 
 ReactDOM.render(
     <App />,
