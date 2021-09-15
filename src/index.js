@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './ColorAPI/App.js';
+import App from './MemeGenerator/App.js';
 
 ReactDOM.render(
     <App />,
