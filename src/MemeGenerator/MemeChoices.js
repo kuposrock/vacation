@@ -17,7 +17,7 @@ class MemeChoices extends React.Component {
         // }
 
         return (
-            <div className="meme" style={this.props.background}>
+            <div className="meme" style={this.props.background} >
 
             </div>
         )

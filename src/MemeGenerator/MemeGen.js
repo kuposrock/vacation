@@ -30,10 +30,7 @@ class MemeGen extends React.Component {
 
     mySubmitHandler = (event) => {
         event.preventDefault();
-        this.setState((prevState, props) => ({
-            listNumber: prevState.listNumber + 1,
-
-        }));
+        
         //console.log(this.state.listNumber);
 
 
@@ -44,30 +41,40 @@ class MemeGen extends React.Component {
         // this.setState({ [name]: event.target.value });
     }
 
+    changeList = (num) => {
+        if(this.state.listNumber>0 || num>0){
+        this.setState((prevState, props) => ({
+            listNumber: prevState.listNumber + num,
+        }));
+    }
+       
+      }
+
 
     render() {
-        var backgrounds = {
-           
-            //backgroundImage: 'url(' + this.state.MasterMemeList[this.state.listNumber].url + ')'
-        }
+        
         console.log(this.state.MasterMemeList[this.state.listNumber])
-            
-        var meme = (this.state.loading) ? "loading" : <MemeChoices background={backgrounds} listNumber={this.state.listNumber} />
-
+        if (this.state.MasterMemeList.length >= 1){
+        var backgrounds = {
+            backgroundImage: 'url(' + this.state.MasterMemeList[this.state.listNumber].url + ')'
+        }
+            var meme = <MemeChoices background={backgrounds} listNumber={this.state.listNumber} />
+    }
         return (
             <div>
                 <div className="container">
+                <button onClick={()=>{this.changeList(-1)}}>&#8592;</button>
                     {meme}
-                    {/* <MemeChoices background={this.state.MasterMemeList[this.state.listNumber]} listNumber={this.state.listNumber} /> */}
-
+                   
+                    <button onClick={()=>{this.changeList(1)}}>&#8594;</button>
                     <form onSubmit={this.mySubmitHandler}>
                         <input type='text' onChange={this.myChangeHandler} name="fName" placeholder="Top Text" />
                         <input type='text' onChange={this.myChangeHandler} name="lName" placeholder="Bottom Text" />
-
                         <input type='submit' />
 
 
                     </form>
+                   
                 </div>
                 {/* 
                 {

@@ -1,4 +1,14 @@
 .meme{
-    width:100px;
-    height:100px;
+    width:600px;
+    height:600px;
+    margin: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+
+}
+
+button{
+    display: inline;
 }
