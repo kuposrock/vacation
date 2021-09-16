@@ -4,7 +4,6 @@ class MemeChoices extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            listNumber: 4
         };
     }
 
@@ -15,10 +14,13 @@ class MemeChoices extends React.Component {
         //         backgroundImage: 'url(' + this.props.background.url + ')'
         //     }
         // }
-
+        console.log(this.props);
         return (
-            <div className="meme" style={this.props.background} >
-
+            <div>
+                {this.props.memeTitle}
+                <div className="meme" style={this.props.background} >
+                 
+                </div>
             </div>
         )
     }

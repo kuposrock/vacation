@@ -12,7 +12,6 @@ class MemeGen extends React.Component {
         };
     }
 
-
     componentDidMount() {
         this.setState({ loading: true })
         fetch("https://api.imgflip.com/get_memes")
@@ -23,17 +22,12 @@ class MemeGen extends React.Component {
                     MasterMemeList: data.data.memes,
                     loading: false,
                 })
-
             })
-
     }
 
     mySubmitHandler = (event) => {
         event.preventDefault();
-        
         //console.log(this.state.listNumber);
-
-
     }
     myChangeHandler = (event) => {
         // console.log(event.target.value + event.target.name)
@@ -55,14 +49,14 @@ class MemeGen extends React.Component {
         
         console.log(this.state.MasterMemeList[this.state.listNumber])
         if (this.state.MasterMemeList.length >= 1){
-        var backgrounds = {
-            backgroundImage: 'url(' + this.state.MasterMemeList[this.state.listNumber].url + ')'
-        }
-            var meme = <MemeChoices background={backgrounds} listNumber={this.state.listNumber} />
+        var backgrounds = { backgroundImage: 'url(' + this.state.MasterMemeList[this.state.listNumber].url + ')' }
+        var title = this.state.MasterMemeList[this.state.listNumber].name;
+        var meme = <MemeChoices background={backgrounds} listNumber={this.state.listNumber} memeTitle={title} />
     }
         return (
             <div>
                 <div className="container">
+                    <div className="title">Meme Generator</div>
                 {meme}
                 <button onClick={()=>{this.changeList(-1)}}>&#8592;</button>
                 {this.state.listNumber + " / " + this.state.MasterMemeList.length}
@@ -73,8 +67,6 @@ class MemeGen extends React.Component {
                         <input type='text' onChange={this.myChangeHandler} name="fName" placeholder="Top Text" />
                         <input type='text' onChange={this.myChangeHandler} name="lName" placeholder="Bottom Text" />
                         <input type='submit' />
-
-
                     </form>
                    
                 </div>

@@ -1,10 +1,10 @@
 .meme{
-    width:600px;
-    height:600px;
+    width:300px;
+    height: 300px;
     margin: 30px auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:contain;
     border: 2px solid black;
     font: 1000;
     font-size: 40px;
