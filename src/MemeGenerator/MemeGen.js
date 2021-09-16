@@ -63,10 +63,12 @@ class MemeGen extends React.Component {
         return (
             <div>
                 <div className="container">
+                {meme}
                 <button onClick={()=>{this.changeList(-1)}}>&#8592;</button>
-                    {meme}
+                {this.state.listNumber + " / " + this.state.MasterMemeList.length}
+                <button onClick={()=>{this.changeList(1)}}>&#8594;</button>
                    
-                    <button onClick={()=>{this.changeList(1)}}>&#8594;</button>
+                
                     <form onSubmit={this.mySubmitHandler}>
                         <input type='text' onChange={this.myChangeHandler} name="fName" placeholder="Top Text" />
                         <input type='text' onChange={this.myChangeHandler} name="lName" placeholder="Bottom Text" />

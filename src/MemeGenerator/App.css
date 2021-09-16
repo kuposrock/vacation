@@ -5,10 +5,27 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: inline-block;
-
+    margin: auto;
+    border: 2px solid black;
 }
 
 button{
     display: inline;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+}
+
+.container{
+    width:60%;
+    margin:auto;
+    border: 2px solid black;
+    align-items: center;
+    text-align: center;
 }
