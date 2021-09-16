@@ -11,6 +11,8 @@ class MemeGen extends React.Component {
             loading: false,
         };
     }
+
+
     componentDidMount() {
         this.setState({ loading: true })
         fetch("https://api.imgflip.com/get_memes")
@@ -45,23 +47,22 @@ class MemeGen extends React.Component {
 
     render() {
         var backgrounds = {
-            backgroundImage: 'url(' + this.state.MasterMemeList[this.state.listNumber] + ')'
+           
+            //backgroundImage: 'url(' + this.state.MasterMemeList[this.state.listNumber].url + ')'
         }
-
-        //console.log(this.state.MasterMemeList[this.state.listNumber]);
-
-        // var text = this.state.loading ? "loading..." : <MemeChoices background={this.state.MasterMemeList[this.state.listNumber]} listNumber={this.state.listNumber} loading={this.state.loading} />
+        console.log(this.state.MasterMemeList[this.state.listNumber])
+            
+        var meme = (this.state.loading) ? "loading" : <MemeChoices background={backgrounds} listNumber={this.state.listNumber} />
 
         return (
             <div>
                 <div className="container">
-                    <MemeChoices background={backgrounds} listNumber={this.state.listNumber} />
+                    {meme}
                     {/* <MemeChoices background={this.state.MasterMemeList[this.state.listNumber]} listNumber={this.state.listNumber} /> */}
 
                     <form onSubmit={this.mySubmitHandler}>
                         <input type='text' onChange={this.myChangeHandler} name="fName" placeholder="Top Text" />
                         <input type='text' onChange={this.myChangeHandler} name="lName" placeholder="Bottom Text" />
-
 
                         <input type='submit' />
 
