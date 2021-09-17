@@ -14,12 +14,13 @@ class MemeChoices extends React.Component {
         //         backgroundImage: 'url(' + this.props.background.url + ')'
         //     }
         // }
+        //test ets
         console.log(this.props);
         return (
             <div>
                 {this.props.memeTitle}
                 <div className="meme" style={this.props.background} >
-                 
+                
                 </div>
             </div>
         )
