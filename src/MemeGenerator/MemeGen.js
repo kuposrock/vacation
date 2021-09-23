@@ -46,7 +46,6 @@ class MemeGen extends React.Component {
 
 
     render() {
-        
         console.log(this.state.MasterMemeList[this.state.listNumber])
         if (this.state.MasterMemeList.length >= 1){
         var backgrounds = { backgroundImage: 'url(' + this.state.MasterMemeList[this.state.listNumber].url + ')' }
@@ -59,7 +58,7 @@ class MemeGen extends React.Component {
                     <div className="title">Meme Generator</div>
                 {meme}
                 <button onClick={()=>{this.changeList(-1)}}>&#8592;</button>
-                {this.state.listNumber + " / " + this.state.MasterMemeList.length}
+                {this.state.listNumber+1 + " / " + this.state.MasterMemeList.length}
                 <button onClick={()=>{this.changeList(1)}}>&#8594;</button>
                    
                 
@@ -70,28 +69,7 @@ class MemeGen extends React.Component {
                     </form>
                    
                 </div>
-                {/* 
-                {
-                    this.state.items.map((item, index) => {
-                        return (
-                            <div key={item + index} className="container">
-                                <div className="col">
-                                    <p>First Name: {item.fName}</p>
-                                    <p>Place of Birth: {item.pob}</p>
-                                    <p>Email: {item.email}</p>
-                                </div>
-                                <div className="col">
-                                    <p>Last Name: {item.lName}</p>
-                                    <p>Phone Number: {item.phone}</p>
-                                    <p>Favorite Food: {item.food}</p>
-                                </div>
-                                
-                                <div className="desc">Description: {item.description}</div>
-                                
-                            </div>
-                        )
-                    })
-                } */}
+               
 
             </div>
         );

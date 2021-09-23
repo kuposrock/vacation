@@ -15,7 +15,7 @@ class MemeChoices extends React.Component {
         //     }
         // }
         //test ets
-        console.log(this.props);
+        //console.log(this.props);
         return (
             <div>
                 {this.props.memeTitle}
