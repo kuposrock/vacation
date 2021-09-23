@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './MemeGenerator/App.js';
+import App from './Meme-List-Generator/App.js';
 
 ReactDOM.render(
     <App />,
