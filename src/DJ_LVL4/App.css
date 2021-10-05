@@ -1,0 +1,12 @@
+.squareContainer {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-gap: 5px;
+  width:500px;
+  margin:auto;
+}
+
+.square {
+  border: 1px solid black;
+}

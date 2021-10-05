@@ -1,11 +1,11 @@
 import './App.css';
-import MemeGen from './MemeGen';
+import NameBadge from './NameBadge';
 
 function App() {
  
   return (
     <div >
-      <MemeGen/>
+      <NameBadge/>
     </div>
   )
 }

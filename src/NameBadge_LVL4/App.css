@@ -1,0 +1,43 @@
+.container{
+    margin:10px auto;
+    width: 600px;
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    border:2px solid black;
+    border-radius: 15px;
+    
+  }
+
+  input {
+    width:200px;
+    margin:10px;
+    border:2px solid black;
+  }
+  
+  .description {
+    width:430px;
+    height:100px;
+    line-break: auto;
+    resize: none;
+    border:2px solid black;
+  }
+
+p{
+  text-align: left;
+  width:200px;
+  margin:10px;
+}
+.col{
+  
+  margin:auto;
+
+}
+.desc{
+  border:2px solid black;
+  margin: 10px auto;
+  flex-basis: 80%;
+  text-align: left;
+  padding:5px;
+}
