@@ -25,7 +25,7 @@ class NameEntry extends React.Component {
                     <form onSubmit={this.mySubmitHandler}>
                         <input type='text' onChange={this.myChangeHandler} name="fName" placeholder="First Name" value={this.state.fName}/>
                         <input type='text' onChange={this.myChangeHandler} name="lName" placeholder="Last Name" value={this.state.lName}/>
-                        <input type='text' onChange={this.myChangeHandler} name="email" placeholder="Favorite Food" />
+                        <input type='text' onChange={this.myChangeHandler} name="email" placeholder="Favorite Food" value={this.state.lName} />
                         <input type='text' onChange={this.myChangeHandler} name="pob" placeholder="Place of Birth" />
                         <input type='number' onChange={this.myChangeHandler} name="phone" placeholder="Phone Number" />
                         <input type='text' onChange={this.myChangeHandler} name="food" placeholder="Favorite Food" />
