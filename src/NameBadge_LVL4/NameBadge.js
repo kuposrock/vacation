@@ -1,44 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
-class NameEntry extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { fName: "", lName: "", email: "", pob: "", phone: "", food: "", description: "", items: [] };
-        
-    }
-    mySubmitHandler = (event) => {
+const NameEntry = () => {
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = { fName: "", lName: "", email: "", pob: "", phone: "", food: "", description: "", items: [] };
+    // }
+
+    const [forms, setForms] = useState({ fName: "", lName: "", email: "", pob: "", phone: "", food: "", description: "", items: [] })
+
+    const mySubmitHandler = (event) => {
         event.preventDefault();
-        var values = this.state.items.concat({ fName: this.state.fName, lName: this.state.lName, email: this.state.email, pob: this.state.pob, phone: this.state.phone, food: this.state.food, description: this.state.description });
-        this.setState({ items: values });
-        console.log(this.state);
+        var values = forms.items.concat({ fName: forms.fName, lName: forms.lName, email: forms.email, pob: forms.pob, phone: forms.phone, food: forms.food, description: forms.description });
+        //  this.setState({ items: values });
+        var holder = {...forms,items:values}
+        setForms(holder);
+        console.log(forms);
     }
-    myChangeHandler = (event) => {
+    const myChangeHandler = (event) => {
         console.log(event.target.value + event.target.name)
         var name = event.target.name;
-        this.setState({ [name]: event.target.value });
+        var holder = {...forms,[name]: event.target.value}
+        setForms(holder);
+
     }
-    render() {
+   
         return (
             <div>
                 <div className="container">
-                    <form onSubmit={this.mySubmitHandler}>
-                        <input type='text' onChange={this.myChangeHandler} name="fName" placeholder="First Name" value={this.state.fName}/>
-                        <input type='text' onChange={this.myChangeHandler} name="lName" placeholder="Last Name" value={this.state.lName}/>
-                        <input type='text' onChange={this.myChangeHandler} name="email" placeholder="Favorite Food" value={this.state.lName} />
-                        <input type='text' onChange={this.myChangeHandler} name="pob" placeholder="Place of Birth" />
-                        <input type='number' onChange={this.myChangeHandler} name="phone" placeholder="Phone Number" />
-                        <input type='text' onChange={this.myChangeHandler} name="food" placeholder="Favorite Food" />
-                        <textarea type='text' onChange={this.myChangeHandler} name="description" placeholder="Description" className="description" />
-                        {console.log(this.state.fName.length <=2)}
-                        <input type='submit' disabled={(this.state.fName.length <=2 || this.state.lName.length <=2 || this.state.email.length <=2 || this.state.pob.length <=2 || this.state.phone.length <=2 || this.state.food.length <=2 || this.state.description.length <=2)}/>
-                         
+                    <form onSubmit={mySubmitHandler}>
+                        <input type='text' onChange={myChangeHandler} name="fName" placeholder="First Name" value={forms.fName}/>
+                        <input type='text' onChange={myChangeHandler} name="lName" placeholder="Last Name" value={forms.lName}/>
+                        <input type='text' onChange={myChangeHandler} name="email" placeholder="Favorite Food" value={forms.email} />
+                        <input type='text' onChange={myChangeHandler} name="pob" placeholder="Place of Birth" />
+                        <input type='number' onChange={myChangeHandler} name="phone" placeholder="Phone Number" />
+                        <input type='text' onChange={myChangeHandler} name="food" placeholder="Favorite Food" />
+                        <textarea type='text' onChange={myChangeHandler} name="description" placeholder="Description" className="description" />
+                        {console.log(forms)}
+                        {console.log(forms.fName.length <=2)}
+                        <input type='submit' disabled={(forms.fName.length <=2 || forms.lName.length <=2 || forms.email.length <=2 || forms.pob.length <=2 || forms.phone.length <=2 || forms.food.length <=2 || forms.description.length <=2)}/>
+                        
+                        
                    
                     </form>
                 </div>
 
                 {
-                    this.state.items.map((item, index) => {
+                    forms.items.map((item, index) => {
                         return (
                             <div key={item + index} className="container">
                                 <div className="col">
@@ -54,14 +63,6 @@ class NameEntry extends React.Component {
                                 
                                 <div className="desc">Description: {item.description}</div>
                                 
-
-                                {/* <p key={item.fName+index}>First Name: {item.fName}</p>
-                        <p key={item.lName+index}>Last Name: {item.lName}</p>
-                        <p key={item.email+index}>Email: {item.email}</p>
-                        <p key={item.pob+index}>Place of Birth: {item.pob}</p>
-                        <p key={item.phone+index}>Phone Number: {item.phone}</p>
-                        <p key={item.food+index}>Favorite Food: {item.food}</p>
-                        <p key={item.description +index}>Description: {item.description}</p> */}
                             </div>
                         )
                     })
@@ -69,7 +70,7 @@ class NameEntry extends React.Component {
 
             </div>
         );
-    }
+    
 }
 export default NameEntry;
 
