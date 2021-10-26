@@ -2,16 +2,16 @@ import React from "react"
 import './App.css';
 import Header from "./Header"
 import Button from "./Button"
-import ThemeContext from "./ThemeContext";
+import {ThemeContextProvider} from "./ThemeContext"
 
 function App() {
 
     return (
         <div>
-          <ThemeContext.Provider value={"light"}>
+          <ThemeContextProvider value={"light"}>
             <Header />
             <Button />
-          </ThemeContext.Provider>
+          </ThemeContextProvider>
         </div>
     )
 }
